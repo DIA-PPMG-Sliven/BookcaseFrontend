@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>About</title>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="style.css">
+        <script src="api.js" defer></script>
+        <script src="javasc.js" defer></script>
+    </head>
+    <body class="page">
+        <header>
+          <button id="open-sidebar-button" onclick="openSidebar()">
+            <img src="menuIcon.svg" />
+          </button>
+          <nav id="navbar">
+            <a class="site-logo" href="home.html" aria-label="Home">
+              <img src="logo.png" alt="BCBCBC logo">
+            </a>
+            <ul class = "navbar">
+              <!--<li><img src="">logo</li>-->
+              <li><button id="close-sidebar-button" onclick="closeSidebar()">
+                <img src="closeIcon.svg"/>
+              </li>
+              <li><a href="home.html" >Home</a></li>
+              <li><a href="majors.html">Majors</a></li>
+              <li><a href="exams.html">Exams</a></li>
+              <li><a href="about.html" class="active">About</a></li>
+              <!--<form style="float:right" action="">
+              <li><input type="text" placeholder="Search.." name="search"></li>
+              <li><button type="submit"></button></li>
+              </form>
+              <li><a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                  </a></li>-->
+            </ul>
+          </nav>
+        </header>
+        <section class="main about-team">
+          <h1>Създадено от</h1>
+          <p class="team-names">Александър Пеев &nbsp;&nbsp;&nbsp; Драгомир Апостолов &nbsp;&nbsp;&nbsp; Ивайла Митева</p>
+        </section>
+        <footer>
+           <div class="socialIcons"> </div>
+           <div class="footerNav">
+            <ul>
+              <li><a href="home.html">Home</a></li>
+              <li><a href="majors.html">Majors</a></li>
+              <li><a href="exams.html">Exams</a></li>
+              <li><a href="about.html">About</a></li>
+            </ul>           
+           </div>   
+            <div class="footerBottom">
+            <p>Copyright &copy; 2026</p>
+           </div>        
+        </footer>
+    </body>
+</html>

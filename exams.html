@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+    <head>
+        <title>Exams</title>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="style.css">
+        <script src="api.js" defer></script>
+        <script src="javasc.js" defer></script>
+    </head>
+    <body>
+        <header>
+          <button id="open-sidebar-button" onclick="openSidebar()">
+            <img src="menuIcon.svg" />
+          </button>
+          <nav id="navbar">
+            <a class="site-logo" href="home.html" aria-label="Home">
+              <img src="logo.png" alt="BCBCBC logo">
+            </a>
+            <ul class="navbar">
+              <li><button id="close-sidebar-button" onclick="closeSidebar()">
+                <img src="closeIcon.svg"/>
+              </button></li>
+              <li><a href="home.html">Home</a></li>
+              <li><a href="majors.html">Majors</a></li>
+              <li><a href="exams.html" class="active">Exams</a></li>
+              <li><a href="about.html">About</a></li>
+            </ul>
+          </nav>
+          <div id="accountMenu" class="account-menu hidden">
+            <button id="accountMenuToggle" class="account-menu-toggle" type="button" aria-label="Account menu" aria-expanded="false">☰</button>
+            <div id="accountMenuPanel" class="account-menu-panel hidden">
+              <button id="accountSignout" type="button">Sign out</button>
+              <button id="accountDelete" type="button">Delete account</button>
+            </div>
+          </div>
+        </header>
+
+        <section class="main exams-main">
+          <h1>Exams</h1>
+
+          <form id="examPageForm" class="exam-page-form">
+            <h2>Add exam</h2>
+            <div class="exam-page-grid">
+              <label for="examPageName">Exam name</label>
+              <input id="examPageName" name="testName" type="text" required>
+
+              <label for="examPageDate">Date</label>
+              <input id="examPageDate" name="examDate" type="date" required>
+
+              <label for="examPageTime">Time (24h)</label>
+              <input id="examPageTime" name="examTime" type="text" inputmode="numeric" placeholder="HH:mm" pattern="([01][0-9]|2[0-3]):[0-5][0-9]" title="Use 24-hour format HH:mm" required>
+
+              <label for="examPageAddress">Address</label>
+              <input id="examPageAddress" name="address" type="text">
+            </div>
+            <button type="submit">Create exam</button>
+          </form>
+
+          <div class="exams-list-wrap">
+            <h2>All exams</h2>
+            <ul id="examsPageList" class="exams-page-list"></ul>
+          </div>
+        </section>
+
+        <div class="modal-container" id="exam_viewer_modal">
+          <div class="modal">
+            <div class="viewer">
+              <h2 class="viewer-title">Exam</h2>
+              <ul class="major-info viewer-list">
+                <li><span>Name:</span> <input class="viewer-exam-name viewer-input" type="text" disabled></li>
+                <li><span>Date:</span> <input class="viewer-exam-date viewer-input" type="date" disabled></li>
+                <li><span>Time (24h):</span> <input class="viewer-exam-time viewer-input" type="text" inputmode="numeric" placeholder="HH:mm" pattern="([01][0-9]|2[0-3]):[0-5][0-9]" title="Use 24-hour format HH:mm" disabled></li>
+                <li><span>Address:</span> <input class="viewer-exam-address viewer-input" type="text" disabled></li>
+              </ul>
+
+              <div class="modal-actions">
+                <button id="editExamViewer" type="button">Edit</button>
+                <button id="saveExamViewer" type="button" hidden>Save</button>
+                <button id="cancelExamViewer" type="button" hidden>Cancel</button>
+                <button id="closeExamViewer" type="button">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <footer>
+           <div class="socialIcons"> </div>
+           <div class="footerNav">
+            <ul>
+              <li><a href="home.html">Home</a></li>
+              <li><a href="majors.html">Majors</a></li>
+              <li><a href="exams.html">Exams</a></li>
+              <li><a href="about.html">About</a></li>
+            </ul>
+           </div>
+            <div class="footerBottom">
+            <p>Copyright &copy; 2026</p>
+           </div>
+        </footer>
+
+    </body>
+</html>
